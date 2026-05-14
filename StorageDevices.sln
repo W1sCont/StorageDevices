@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageDevices", "StorageDevices\StorageDevices.csproj", "{F0A17FC6-C1BB-46E5-81A2-54F8D045D0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices", "Devices\Devices.csproj", "{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0A17FC6-C1BB-46E5-81A2-54F8D045D0A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A17FC6-C1BB-46E5-81A2-54F8D045D0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A17FC6-C1BB-46E5-81A2-54F8D045D0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A17FC6-C1BB-46E5-81A2-54F8D045D0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
