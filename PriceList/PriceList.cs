@@ -1,16 +1,18 @@
+using System;
+using System.Collections;
 using Devices;
 namespace PriceList;
 
-public class PriceList
+public class PriceListClass
 {
-    private List<Devices> devices;
+    private List<DevicesClass> _devices;
 
     
-    public PriceList()
+    public PriceListClass()
     {
-        devices = new List<Devices>();
+        _devices = new List<DevicesClass>();
     }
-
+    
     public void Save(string type, string path)
     {
         
@@ -21,9 +23,41 @@ public class PriceList
         
     }
 
-    public void Add(Devices obj)
+    public void AddNewDevice()
     {
+        Console.WriteLine("1-Flash, 2-DVD, 3-HDD, 0-Return:");
+        string type = Console.ReadLine();
+
+        Console.WriteLine("Enter brand of device:");
+        string? brand = Console.ReadLine();
+        Console.WriteLine("Enter title of device:");
+        string? title = Console.ReadLine();
+        Console.WriteLine("Enter capacity of device:");
+        int capacity = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter quantity of device:");
+        int quantity = int.Parse(Console.ReadLine());
         
+        switch (type)
+        {
+            case "1":
+                Console.WriteLine("Enter speed of device:");
+                int speed = int.Parse(Console.ReadLine());
+                _devices.Add(new Flash(brand, type, title, capacity, quantity, speed));
+                break;
+            case "2": 
+                Console.WriteLine("Enter write speed of device:");
+                speed = int.Parse(Console.ReadLine());
+                _devices.Add(new DVD(brand, type, title, capacity, quantity, speed));
+                break;
+            case "3": 
+                Console.WriteLine("Enter RPM of device:");
+                speed = int.Parse(Console.ReadLine());
+                _devices.Add(new HDD(brand, type, title, capacity, quantity, speed));
+                break;
+            default:
+                Console.WriteLine("Unknown device type!");
+                break;
+        }
     }
 
     public void Remove(string name)
@@ -43,6 +77,9 @@ public class PriceList
     
     public void Print()
     {
-        
+        foreach (var device in _devices)
+        {
+            device.Print();
+        }
     }
 }

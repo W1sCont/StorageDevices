@@ -1,5 +1,6 @@
-﻿using StorageDevices;
-namespace ProgramExam
+﻿using Devices;
+using PriceList;
+namespace StorageDevices
 {
     class MainClass
     {
@@ -10,34 +11,32 @@ namespace ProgramExam
 
             try
             {
+                PriceListClass priceList = new PriceListClass();
+                
+                
                 bool start = true;
                 Console.WriteLine("");
                 while (start)
                 {
-                    Console.WriteLine("1-, 2-, 3-, 0-Вихід");
+                    priceList.Print();
+                    Console.WriteLine("Enter command");
+                    Console.WriteLine("1-Add, 2-Edit, 3-Remove, 4-Search, 5-Sort, 6-Save, 7-Load, 8-Iterator" +
+                                      " \n9-SaveSoap, 10-LoadSoap, 11-SaveXml, 12-LoadXml, 13-SaveJson, 14-LoadJson, 0-Exit");
                     string? input = Console.ReadLine();
                     switch (input)
-                    {   
+                    {
                         case "1":
-                            Console.WriteLine("");
-                            string? input1 = Console.ReadLine();
-                            
+                            priceList.AddNewDevice();
                             break;
                         case "2":
-                            Console.WriteLine("");
-                            input1 = Console.ReadLine();
-                            
                             break;
                         case "3":
-                            Console.WriteLine("");
-                            input1 = Console.ReadLine();
-                            
-                            break; 
+                            break;
                         case "0":
                             start = false;
                             break;
                         default:
-                            Console.WriteLine("Не вірна команда");
+                            Console.WriteLine("Unknown command!");
                             break;
                     }
                 }

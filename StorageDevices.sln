@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageDevices", "StorageDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices", "Devices\Devices.csproj", "{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceList", "PriceList\PriceList.csproj", "{76559E2C-6A6B-4026-B4C7-FCEDBE0D26AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISerialize", "ISerialize\ISerialize.csproj", "{E493C752-47CD-4377-8422-EF39FF92838D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CF86AD-1FD6-4B16-9AD8-99503BAC6D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76559E2C-6A6B-4026-B4C7-FCEDBE0D26AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76559E2C-6A6B-4026-B4C7-FCEDBE0D26AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76559E2C-6A6B-4026-B4C7-FCEDBE0D26AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76559E2C-6A6B-4026-B4C7-FCEDBE0D26AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E493C752-47CD-4377-8422-EF39FF92838D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E493C752-47CD-4377-8422-EF39FF92838D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E493C752-47CD-4377-8422-EF39FF92838D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E493C752-47CD-4377-8422-EF39FF92838D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
