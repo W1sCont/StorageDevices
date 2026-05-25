@@ -3,8 +3,8 @@ namespace StorageDevices;
 
 public class ConsoleLog : ILog
 {
-    public void Print()
+    public void Print(string? message)
     {
-        
+        Console.WriteLine(message);
     }
 }

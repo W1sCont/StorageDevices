@@ -2,5 +2,5 @@ namespace Devices;
 
 public interface ILog
 {
-    public void Print();
+    public void Print(string? message);
 }
