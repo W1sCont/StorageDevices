@@ -45,13 +45,15 @@ public class PriceListClass
         if (device != null) { _devices.Remove(device); }
     }
 
-    public void Edit(DevicesClass obj, string? brand,string? title, int capacity,int quantity)
+    public void Edit(DevicesClass obj, string? brand,string? title, int capacity,int quantity, int speed)
     {
         obj.Brand = brand;
         obj.Title = title;
         obj.Capacity = capacity;
         obj.Quantity = quantity;
-        obj.EditSpecialFields();
+        if (obj is Flash flash) flash.Speed = speed;
+        else if (obj is DVD dvd) dvd.WriteSpeed = speed;
+        else if (obj is HDD hdd) hdd.RPM = speed;
     }
     
     public DevicesClass? Search(string? title)

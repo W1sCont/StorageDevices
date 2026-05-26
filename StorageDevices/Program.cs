@@ -78,7 +78,23 @@ namespace StorageDevices
                             if (!string.IsNullOrWhiteSpace(newTitle)) device.Title = newTitle;
                             int newCapacity = EditInt($"Enter new Capacity (current: {device.Capacity}):", device.Capacity);
                             int newQuantity = EditInt($"Enter new Quantity (current: {device.Quantity}):", device.Quantity);
-                            priceList.Edit(device, newBrand,newTitle,newCapacity,newQuantity);
+                            int newSpeed = 0;
+                            if (device is Flash flash)
+                            {
+                                Console.WriteLine($"Enter new Speed (current: {flash.Speed}):");
+                                newSpeed = EditInt($"Enter new Speed (current: {flash.Speed}):", flash.Speed);
+                            }
+                            else if (device is DVD dvd) 
+                            {
+                                Console.WriteLine($"Enter new Speed (current: {dvd.WriteSpeed}):");
+                                newSpeed = EditInt($"Enter new Speed (current: {dvd.WriteSpeed}):", dvd.WriteSpeed);
+                            }
+                            else if (device is HDD hdd)
+                            {
+                                Console.WriteLine($"Enter new Speed (current: {hdd.RPM}):");
+                                newSpeed = EditInt($"Enter new Speed (current: {hdd.RPM}):", hdd.RPM);
+                            }
+                            priceList.Edit(device, newBrand,newTitle,newCapacity,newQuantity, newSpeed);
                             break;
                         case "3":
                             Console.WriteLine("Enter device TITLE to REMOVE:");

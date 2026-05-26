@@ -34,7 +34,6 @@ public abstract class DevicesClass
     }
 
     public abstract void Print();
-    public virtual void EditSpecialFields(){}
 }
 
 [Serializable]
@@ -50,15 +49,6 @@ public class Flash : DevicesClass
     public override void Print()
     {
         Console.WriteLine($"Flash Brand: {Brand}, Type: {Type}, Title: {Title}, Capacity: {Capacity}, Quantity: {Quantity}, Speed: {Speed}");
-    }
-    public override void EditSpecialFields()
-    {
-        Console.WriteLine($"Enter new Speed (current: {Speed}):");
-        string? input = Console.ReadLine();
-        if (!string.IsNullOrWhiteSpace(input) && int.TryParse(input, out int result))
-        {
-            Speed = result;
-        }
     }
     public override string ToString()
     {
@@ -81,15 +71,6 @@ public class DVD : DevicesClass
         Console.WriteLine($"DVD Brand: {Brand}, Type: {Type}, Title: {Title}, Capacity: {Capacity}, Quantity: {Quantity}, Write Speed: {WriteSpeed}");
 
     }
-    public override void EditSpecialFields()
-    {
-        Console.WriteLine($"Enter new Write Speed (current: {WriteSpeed}):");
-        string? input = Console.ReadLine();
-        if (!string.IsNullOrWhiteSpace(input) && int.TryParse(input, out int result))
-        {
-            WriteSpeed = result;
-        }
-    }
     public override string ToString()
     {
         return
@@ -109,15 +90,6 @@ public class HDD : DevicesClass
     public override void Print()
     {
         Console.WriteLine($"HDD Brand: {Brand}, Type: {Type}, Title: {Title}, Capacity: {Capacity}, Quantity: {Quantity}, RPM: {RPM}");
-    }
-    public override void EditSpecialFields()
-    {
-        Console.WriteLine($"Enter new RPM (current: {RPM}):");
-        string? input = Console.ReadLine();
-        if (!string.IsNullOrWhiteSpace(input) && int.TryParse(input, out int result))
-        {
-            RPM = result;
-        }
     }
     public override string ToString()
     {
